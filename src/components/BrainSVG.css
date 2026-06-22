@@ -1,0 +1,54 @@
+@keyframes neon-breathe {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.3)) drop-shadow(0 0 25px rgba(138, 43, 226, 0.2));
+    transform: scale(1);
+  }
+  100% {
+    filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.6)) drop-shadow(0 0 50px rgba(138, 43, 226, 0.4));
+    transform: scale(1.06);
+  }
+}
+
+.brain-svg-anim {
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  object-fit: cover;
+  animation: neon-breathe 4s infinite alternate ease-in-out;
+  will-change: transform, filter;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.4s ease-out;
+}
+
+
+
+@keyframes pop-in {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.85;
+  }
+}
+
+.brain-parallax-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 0;
+  opacity: 0.85;
+  width: 100%;
+  pointer-events: none;
+  animation: pop-in 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@media (max-width: 768px) {
+  .brain-svg-anim {
+    object-fit: contain;
+  }
+}

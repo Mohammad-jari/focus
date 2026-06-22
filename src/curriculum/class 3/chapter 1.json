@@ -1,0 +1,143 @@
+{
+    "id": "class3_chapter1",
+    "class": 3,
+    "chapterNumber": 1,
+    "title": "What's In A Name?",
+    "subtitle": "The Secret Message Mystery",
+    "difficulty": "easy",
+    "estimatedTime": 20,
+    "xpReward": 100,
+    "coinReward": 50,
+    "story": {
+        "title": "The Hidden Message",
+        "scenes": [
+            {
+                "id": "scene1",
+                "speaker": "tessa",
+                "text": "Oh no! Someone has left a secret message in the school library."
+            },
+            {
+                "id": "scene2",
+                "speaker": "tessa",
+                "text": "The message looks strange. Can you help me decode it?"
+            },
+            {
+                "id": "scene3",
+                "speaker": "tessa",
+                "text": "We will learn how letters can be shifted to create secret codes."
+            }
+        ]
+    },
+    "learningObjectives": [
+        "Recognize patterns in letters",
+        "Understand simple encryption",
+        "Identify number names",
+        "Develop logical thinking"
+    ],
+    "activities": [
+        {
+            "id": "cipher_intro",
+            "type": "interactive",
+            "title": "Shift The Alphabet",
+            "description": "Move each letter forward by one position.",
+            "xp": 10
+        },
+        {
+            "id": "cipher_practice",
+            "type": "interactive",
+            "title": "Encode A Message",
+            "description": "Use a shift of 3 to encode a secret message.",
+            "xp": 15
+        }
+    ],
+    "questions": [
+        {
+            "id": "q1",
+            "type": "mcq",
+            "question": "If A becomes B and B becomes C, what does C become?",
+            "options": [
+                "D",
+                "E",
+                "A",
+                "B"
+            ],
+            "answer": "D",
+            "hint": "Move one step forward in the alphabet.",
+            "explanation": "C shifts to D."
+        },
+        {
+            "id": "q2",
+            "type": "mcq",
+            "question": "CAESAR encrypted with a shift of 3 begins with which letter?",
+            "options": [
+                "D",
+                "E",
+                "F",
+                "G"
+            ],
+            "answer": "F",
+            "hint": "Move C three positions ahead.",
+            "explanation": "C → D → E → F."
+        },
+        {
+            "id": "q3",
+            "type": "mcq",
+            "question": "Roy's favourite number has 3 letters and twice as many vowels as consonants. Which number is it?",
+            "options": [
+                "TWO",
+                "SIX",
+                "TEN",
+                "ONE"
+            ],
+            "answer": "ONE",
+            "hint": "Count vowels and consonants.",
+            "explanation": "ONE contains 2 vowels and 1 consonant."
+        },
+        {
+            "id": "q4",
+            "type": "mcq",
+            "question": "Which number name comes second in dictionary order?",
+            "options": [
+                "FIVE",
+                "SIX",
+                "EIGHT",
+                "NINE"
+            ],
+            "answer": "FIVE",
+            "hint": "Arrange alphabetically.",
+            "explanation": "EIGHT, FIVE, NINE, SIX."
+        },
+        {
+            "id": "q5",
+            "type": "mcq",
+            "question": "Which word has exactly one vowel?",
+            "options": [
+                "ONE",
+                "TWO",
+                "FIVE",
+                "NINE"
+            ],
+            "answer": "TWO",
+            "hint": "Count vowels.",
+            "explanation": "TWO contains only one vowel."
+        }
+    ],
+    "bossChallenge": {
+        "title": "Decode The Secret Scroll",
+        "description": "Solve all puzzles to reveal the hidden message.",
+        "requiredCorrect": 4,
+        "xpReward": 50,
+        "coinReward": 25,
+        "finalMessage": "Excellent work! You helped Tessa decode the secret message."
+    },
+    "rewards": {
+        "badge": "Code Breaker",
+        "unlockTitle": "Secret Message Explorer"
+    },
+    "aiTutorPrompts": {
+        "hintMode": "Give a small hint without revealing the answer.",
+        "explainMode": "Explain the concept in a simple Class 3 friendly way.",
+        "challengeMode": "Generate a similar question.",
+        "storyMode": "Explain using a fun story involving Tessa."
+    }
+}

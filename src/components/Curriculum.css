@@ -1,0 +1,384 @@
+/* ── LEVEL COLOR TOKENS ── */
+:root {
+  --l1: #5BA8F5;  --l1-dk: #1A5FA8;
+  --l2: #5DC95D;  --l2-dk: #2E7D32;
+  --l3: #9D8FE0;  --l3-dk: #4527A0;
+  --l4: #F0A050;  --l4-dk: #7B3F00;
+  --l5: #3DC9A0;  --l5-dk: #0F6E56;
+  --l6: #F07055;  --l6-dk: #7B2D14;
+  --l7: #E0508A;  --l7-dk: #72243E;
+  --l8: #72C44A;  --l8-dk: #27500A;
+  --l9: #8A80F0;  --l9-dk: #26215C;
+  --l10: #4A90E2; --l10-dk: #0D2B5E;
+
+  --curr-radius: 16px;
+  --curr-radius-sm: 10px;
+  --curr-spine-width: 3px;
+  --curr-navy: #0D1B3E;
+  --curr-node-bg: rgba(13,27,62,0.95);
+  --curr-cyan: #00C6FF;
+}
+
+/* ── SECTION WRAPPER ── */
+.curriculum-section {
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* ── HEADER ── */
+.curriculum-header {
+  text-align: center;
+  padding: 0 0 2.5rem;
+}
+
+.journey-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--curr-cyan);
+  margin-bottom: 1.1rem;
+}
+.journey-eyebrow::before,
+.journey-eyebrow::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1.5px;
+  background: var(--curr-cyan);
+  opacity: 0.4;
+}
+
+.journey-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.01em;
+}
+.journey-title .highlight {
+  color: var(--curr-cyan);
+}
+
+.journey-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.72);
+  font-weight: 600;
+  max-width: 540px;
+  margin: 0 auto 0;
+  line-height: 1.65;
+}
+
+/* ── TESSA QUOTE ── */
+.tessa-quote {
+  background: rgba(0,198,255,0.08);
+  border: 1px solid rgba(0,198,255,0.2);
+  border-radius: var(--curr-radius);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  width: 100%;
+}
+.quote-avatar {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  background: rgba(0,198,255,0.12);
+  border: 1.5px solid rgba(0,198,255,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quote-text {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+  line-height: 1.7;
+  font-style: italic;
+}
+.quote-text strong {
+  color: var(--curr-cyan);
+  font-style: normal;
+}
+
+/* ── STATS STRIP ── */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 0 0 0;
+  width: 100%;
+}
+.stat-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: var(--curr-radius-sm);
+  padding: 1rem;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: var(--curr-cyan);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+/* ── JOURNEY WRAPPER (timeline column) ── */
+.journey-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 0 4rem;
+  width: 100%;
+}
+
+/* ── SPINE ── */
+.spine {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: var(--curr-spine-width);
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--l1-dk) 8%,
+    var(--l2-dk) 20%,
+    var(--l3-dk) 32%,
+    var(--l4-dk) 44%,
+    var(--l5-dk) 56%,
+    var(--l6-dk) 68%,
+    var(--l7-dk) 76%,
+    var(--l8-dk) 83%,
+    var(--l9-dk) 90%,
+    var(--l10-dk) 100%
+  );
+  opacity: 0.5;
+}
+
+/* ── STAGE SECTION DIVIDER ── */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 2.5rem 0 1.2rem;
+  padding-left: calc(62px + 16px);
+}
+.section-divider span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  white-space: nowrap;
+}
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+/* ── LEVEL ROW ── */
+.level-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* ── NODE (circular badge) ── */
+.level-node {
+  flex-shrink: 0;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  position: relative;
+  z-index: 2;
+  background: var(--curr-node-bg);
+}
+.level-node .node-num {
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 2px;
+  /* color inherited from style prop */
+}
+.level-node .node-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.level-row:hover .level-node {
+  transform: scale(1.07);
+}
+
+/* ── CARD BODY ── */
+.level-card-body {
+  flex: 1;
+  border-radius: var(--curr-radius);
+  padding: 1rem 1.2rem 1rem 1.3rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+  transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+}
+.level-row:hover .level-card-body {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.15);
+  transform: translateX(4px);
+}
+
+/* ── CARD TOP ROW ── */
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+.class-tag {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  /* color set inline via style prop — bright level color */
+}
+.skill-tag {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  /* background + color set inline — use rgba dark bg for dark theme */
+}
+
+/* ── STUDENT CONTENT ── */
+.name-student {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-bottom: 3px;
+  /* color set inline — bright level color */
+}
+.name-student .sub-tagline {
+  display: block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.55);
+  margin-top: 2px;
+}
+.card-desc {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.78);
+  font-weight: 600;
+  line-height: 1.6;
+  margin-top: 4px;
+}
+
+/* ── CAPSTONE SPECIAL ── */
+.level-row.capstone .level-card-body,
+.level-card-body.capstone-body {
+  background: linear-gradient(135deg, rgba(0,140,255,0.1) 0%, rgba(0,198,255,0.05) 100%);
+  border-color: rgba(0,198,255,0.28);
+}
+.level-row.capstone .level-node {
+  background: linear-gradient(135deg, #001D4A 0%, #0D3678 100%);
+  box-shadow: 0 0 28px rgba(0,198,255,0.4);
+}
+
+/* ── OUTCOMES PANEL ── */
+.outcomes-panel {
+  display: none;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-top: none;
+  border-radius: 0 0 var(--curr-radius) var(--curr-radius);
+  margin-top: -10px;
+  margin-left: calc(62px + 16px);
+  padding: 1rem 1.2rem 1.1rem;
+  width: calc(100% - 78px);
+  box-sizing: border-box;
+  animation: curriculum-expand 0.22s ease;
+}
+.outcomes-panel.open {
+  display: block;
+}
+@keyframes curriculum-expand {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.outcome-chip {
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 7px 11px;
+  border-radius: var(--curr-radius-sm);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.82);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  line-height: 1.35;
+}
+
+.panel-label {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 0.6rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .spine { left: 30px; }
+  .outcomes-grid { grid-template-columns: 1fr; }
+  .outcomes-panel { margin-left: 0; width: 100%; }
+  .stats-strip { grid-template-columns: 1fr; gap: 10px; }
+  .section-divider { padding-left: 0; }
+  .journey-title { font-size: clamp(1.75rem, 8vw, 2.5rem); }
+}
